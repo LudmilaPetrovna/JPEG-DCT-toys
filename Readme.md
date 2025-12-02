@@ -1,3 +1,3 @@
 # Играемся с сжатием в JPEG, играемся с DCT и IDCT, делаем GIMP-подобный редактор для JPEG-файлов
 
-![Пример](./img/example.png)
+![example.png](./img/example.png)
