@@ -43,6 +43,12 @@
 * region blackout
 * patch recompression like in fused images
 
+# tools
+
+* packJPG - A compression program for further compressing JPEG image files
+* Lepton - Lepton is a tool and file format for losslessly compressing JPEGs by an average of 22%.
+* JPEG-XL - JPEG XL image format reference implementation
+
 # Ссылки
 
 * https://github.com/richgel999/jpeg-compressor
