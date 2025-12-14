@@ -4,6 +4,7 @@
 *.pgm
 *.ppm
 
+a.out
 
 # Prerequisites
 *.d

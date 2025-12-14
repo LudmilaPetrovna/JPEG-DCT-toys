@@ -48,6 +48,7 @@
 * packJPG - A compression program for further compressing JPEG image files
 * Lepton - Lepton is a tool and file format for losslessly compressing JPEGs by an average of 22%.
 * JPEG-XL - JPEG XL image format reference implementation
+* guetzli - perceptual JPEG encoder
 
 # Ссылки
 
@@ -55,3 +56,4 @@
 * https://medium.com/@duhroach/reducing-jpg-file-size-e5b27df3257c
 * https://en.wikipedia.org/wiki/Discrete_cosine_transform
 * https://www.ee.columbia.edu/~jh2700/Detecting%20Doctored%20JPEG%20Images%20Via%20DCT%20Coefficient%20Analysis%20.pdf
+* https://github.com/google/guetzli

@@ -582,9 +582,15 @@ NJ_INLINE void njDecodeBlock(nj_component_t* c, unsigned char* out) {
         coef += (code >> 4) + 1;
         if (coef > 63) njThrow(NJ_SYNTAX_ERROR);
         nj.block[(int) njZZ[coef]] = value * nj.qtab[c->qtsel][coef];
+printf("coef:%d, value:%d\n",coef,nj.block[(int) njZZ[coef]]);
     } while (coef < 63);
 
+for (coef = 0;  coef < 64;  coef++){
+printf("ZZ coef:%d, value:%d\n",coef,nj.block[coef]);
+}
+
 for (coef = 10;  coef < 64;  coef += 8){
+printf("coef:%d, value:%d\n",coef,nj.block[(int) njZZ[coef]]);
 //nj.block[coef]+=rand()&0xFF;
 }
 
