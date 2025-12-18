@@ -3,6 +3,7 @@
 *.bmp
 *.pgm
 *.ppm
+*.tga
 
 a.out
 

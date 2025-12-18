@@ -55,7 +55,7 @@ int main(int argc, char **argv)
     printf("DCT coefficients (natural order 8x8 after zigzag):\n");
     for (i = 0; i < 8; i++) {
         for (j = 0; j < 8; j++)
-            printf("%6d ", block[i * 8 + j]);
+            printf("%6d, ", block[i * 8 + j]);
         printf("\n");
     }
 

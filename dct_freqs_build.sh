@@ -11,3 +11,4 @@ SIZE="${SIDE}x${SIDE}"
 montage -geometry $SIZE+0+0 -tile 8x freqs-$SIZE-*.png freqs-pano-$SIZE.png
 convert freqs-pano-$SIZE.png -interpolate Nearest -interpolative-resize 1000x1000 freqs-pano-$SIZE-1000.png
 done
+
