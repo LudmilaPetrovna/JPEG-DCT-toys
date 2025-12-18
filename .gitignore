@@ -4,6 +4,8 @@
 *.pgm
 *.ppm
 *.tga
+dct_freqs
+jpeg_dump_dct
 
 a.out
 
