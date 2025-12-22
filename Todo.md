@@ -52,6 +52,7 @@
 
 # Ссылки
 
+* https://yasoob.me/posts/understanding-and-writing-jpeg-decoder-in-python/ - хорошая статья с кучей ссылок про написание декодера
 * https://github.com/richgel999/jpeg-compressor
 * https://medium.com/@duhroach/reducing-jpg-file-size-e5b27df3257c
 * https://en.wikipedia.org/wiki/Discrete_cosine_transform
