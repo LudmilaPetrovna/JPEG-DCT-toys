@@ -7,6 +7,17 @@
 dct_freqs
 jpeg_dump_dct
 
+*.mp3
+*.mp4
+*.avi
+*.ogg
+*.opus
+*.html
+
+*.7z
+*.zip
+
+
 a.out
 
 # Prerequisites

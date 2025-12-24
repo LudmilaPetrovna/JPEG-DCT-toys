@@ -2,6 +2,16 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <jpeglib.h>
+static const double aanscale[8] = {
+    1.0,
+    1.387039845,
+    1.306562965,
+    1.175875602,
+    1.0,
+    0.785694958,
+    0.541196100,
+    0.275899379
+};
 
 int main(int argc, char **argv)
 {
@@ -41,6 +51,16 @@ int main(int argc, char **argv)
         return 1;
     }
 
+  /* предполагаем 1 компонент (grayscale) */
+    jpeg_component_info *comp = &cinfo.comp_info[0];
+    int qno = comp->quant_tbl_no;
+    JQUANT_TBL *qt = cinfo.quant_tbl_ptrs[qno];
+
+    if (!qt) {
+        fprintf(stderr, "No quantization table\n");
+        return 1;
+    }
+
     /* Берём первый (и единственный) блок */
     block_array =
         cinfo.mem->access_virt_barray(
@@ -54,10 +74,16 @@ int main(int argc, char **argv)
 
     printf("%s: DCT coefficients (natural order 8x8 after zigzag):\n",argv[1]);
     for (i = 0; i < 8; i++) {
-        for (j = 0; j < 8; j++)
-            printf("%6d, ", block[i * 8 + j]);
+        for (j = 0; j < 8; j++){
+double val_d=(double)block[i * 8 + j]*(double)qt->quantval[i*8+j];
+int val=(int)(val_d+.5);
+
+//            printf("%6d*%d, ",val,qt->quantval[i*8+j]);
+            printf("%6d, ",val);
+}
         printf("\n");
-    }
+}
+
 
     printf("\n");
 
